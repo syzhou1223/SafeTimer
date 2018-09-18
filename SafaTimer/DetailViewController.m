@@ -41,7 +41,7 @@
     __weak typeof(self) weakSelf = self;
     
     if (Test == 1) {
-        //使用WeakObject来转发消息，不会出现NSTimer强引用住self的情况
+        //使用ForwardingObject来转发消息，不会出现NSTimer强引用住self的情况
         _timer = [NSTimer timerWithTimeInterval:1 target:[ForwardingObject forwardWithTarget:self] selector:@selector(refreshTime) userInfo:nil repeats:YES];
         [[NSRunLoop currentRunLoop] addTimer:weakSelf.timer forMode:NSRunLoopCommonModes];
     } else if (Test == 2) {
@@ -54,6 +54,11 @@
         }];
         [[NSRunLoop currentRunLoop] addTimer:weakSelf.timer forMode:NSRunLoopCommonModes];
     } else if (Test == 3) {
+        //timer会强引用住self,导致self无法释放，dealloc不会执行，timer也会一直在后台执行
+        _timer = [NSTimer timerWithTimeInterval:1 target:self selector:@selector(refreshTime) userInfo:nil repeats:YES];
+        [[NSRunLoop currentRunLoop] addTimer:weakSelf.timer forMode:NSRunLoopCommonModes];
+    } else if (Test == 4) {
+        //给ForwaringObject发一个不存在的方法，不会crash
         ForwardingObject *obj = [[ForwardingObject alloc] init];
         [obj performSelector:@selector(refreshTime)];
     }
@@ -74,7 +79,7 @@
 }
 
 - (void)dealloc {
-    NSLog(@"SecondViewController dealloc");
+    NSLog(@"DetailViewController dealloc");
     [self.timer invalidate];
 }
 
