@@ -13,6 +13,8 @@
 		7714D2CE215080D400349479 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7714D2CD215080D400349479 /* Assets.xcassets */; };
 		7714D2D1215080D400349479 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7714D2CF215080D400349479 /* LaunchScreen.storyboard */; };
 		7714D2D4215080D400349479 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7714D2D3215080D400349479 /* main.m */; };
+		7714D2DC2150813500349479 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7714D2DB2150813500349479 /* DetailViewController.m */; };
+		7714D2E62150928100349479 /* ForwardingObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7714D2E52150928100349479 /* ForwardingObject.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,10 @@
 		7714D2D0215080D400349479 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7714D2D2215080D400349479 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7714D2D3215080D400349479 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7714D2DA2150813500349479 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		7714D2DB2150813500349479 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		7714D2E42150928100349479 /* ForwardingObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ForwardingObject.h; sourceTree = "<group>"; };
+		7714D2E52150928100349479 /* ForwardingObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ForwardingObject.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +68,10 @@
 				7714D2C5215080D200349479 /* AppDelegate.m */,
 				7714D2C7215080D200349479 /* ViewController.h */,
 				7714D2C8215080D200349479 /* ViewController.m */,
+				7714D2DA2150813500349479 /* DetailViewController.h */,
+				7714D2DB2150813500349479 /* DetailViewController.m */,
+				7714D2E42150928100349479 /* ForwardingObject.h */,
+				7714D2E52150928100349479 /* ForwardingObject.m */,
 				7714D2CA215080D200349479 /* Main.storyboard */,
 				7714D2CD215080D400349479 /* Assets.xcassets */,
 				7714D2CF215080D400349479 /* LaunchScreen.storyboard */,
@@ -144,6 +154,8 @@
 				7714D2C9215080D200349479 /* ViewController.m in Sources */,
 				7714D2D4215080D400349479 /* main.m in Sources */,
 				7714D2C6215080D200349479 /* AppDelegate.m in Sources */,
+				7714D2DC2150813500349479 /* DetailViewController.m in Sources */,
+				7714D2E62150928100349479 /* ForwardingObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,7 +301,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Com.demo.com.SafaTimer;
+				PRODUCT_BUNDLE_IDENTIFIER = com.demo.SafaTimer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -305,7 +317,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Com.demo.com.SafaTimer;
+				PRODUCT_BUNDLE_IDENTIFIER = com.demo.SafaTimer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
